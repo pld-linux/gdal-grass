@@ -1,0 +1,23 @@
+--- gdal-grass-1.3.1/Makefile.in.orig	2005-10-19 17:52:19.000000000 +0200
++++ gdal-grass-1.3.1/Makefile.in	2005-10-20 22:56:07.293186736 +0200
+@@ -23,13 +23,13 @@
+ default:	$(GLIBNAME) $(OLIBNAME)
+ 
+ install:	default
+-	install -d $(AUTOLOAD_DIR)
+-	cp $(GLIBNAME) $(AUTOLOAD_DIR)
+-	cp $(OLIBNAME) $(AUTOLOAD_DIR)
+-	test -d ${GRASSTABLES_DIR} || mkdir ${GRASSTABLES_DIR}
+-	test -d ${GRASSTABLES_DIR}/etc || mkdir ${GRASSTABLES_DIR}/etc
+-	cp @GRASS_GISBASE@/etc/ellipse.table ${GRASSTABLES_DIR}/etc
+-	cp @GRASS_GISBASE@/etc/datum.table ${GRASSTABLES_DIR}/etc	
++	install -d $(DESTDIR)$(AUTOLOAD_DIR)
++	cp $(GLIBNAME) $(DESTDIR)$(AUTOLOAD_DIR)
++	cp $(OLIBNAME) $(DESTDIR)$(AUTOLOAD_DIR)
++	install -d $(DESTDIR)${GRASSTABLES_DIR}
++	install -d $(DESTDIR)${GRASSTABLES_DIR}/etc
++	ln -s @GRASS_GISBASE@/etc/ellipse.table $(DESTDIR)${GRASSTABLES_DIR}/etc
++	ln -s @GRASS_GISBASE@/etc/datum.table $(DESTDIR)${GRASSTABLES_DIR}/etc	
+ 
+ clean:
+ 	rm -f $(OLIBNAME) $(GLIBNAME) *.o 
