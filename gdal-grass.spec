@@ -1,5 +1,5 @@
 Summary:	GRASS 6 drivers for GDAL and OGR
-Summary(pl):	Sterowniki GRASS 6 dla bibliotek GDAL i OGR
+Summary(pl.UTF-8):   Sterowniki GRASS 6 dla bibliotek GDAL i OGR
 Name:		gdal-grass
 Version:	1.3.2
 Release:	1
@@ -19,7 +19,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 GRASS 6 drivers for GDAL and OGR.
 
-%description -l pl
+%description -l pl.UTF-8
 Sterowniki GRASS 6 dla bibliotek GDAL i OGR.
 
 %prep
