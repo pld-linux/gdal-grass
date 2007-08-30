@@ -1,12 +1,12 @@
 Summary:	GRASS 6 drivers for GDAL and OGR
 Summary(pl.UTF-8):	Sterowniki GRASS 6 dla bibliotek GDAL i OGR
 Name:		gdal-grass
-Version:	1.4.1
+Version:	1.4.3
 Release:	1
 License:	BSD-like
 Group:		Libraries
 Source0:	ftp://ftp.remotesensing.org/gdal/%{name}-%{version}.tar.gz
-# Source0-md5:	05403a06e8918763bd0fbce2988d43d4
+# Source0-md5:	2bfb7640e03b4d9d012f1a5d62c0351d
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://www.gdal.org/gdal/
 BuildRequires:	gdal-devel >= 1.4.1
