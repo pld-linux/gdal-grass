@@ -11,9 +11,9 @@ Patch0:		%{name}-DESTDIR.patch
 URL:		http://www.gdal.org/gdal/
 BuildRequires:	gdal-devel >= 1.4.1
 BuildRequires:	libstdc++-devel
-BuildRequires:	grass-devel >= 6.2.0
+BuildRequires:	grass-devel >= 6.4.0
 Requires:	gdal >= 1.4.1
-Requires:	grass >= 6.2.0
+Requires:	grass >= 6.4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -26,11 +26,9 @@ Sterowniki GRASS 6 dla bibliotek GDAL i OGR.
 %setup -q
 %patch0 -p1
 
-rm -rf autom4te.cache
-
 %build
 %configure \
-	CPPFLAGS="-I/usr/include/grass62" \
+	CPPFLAGS="-I/usr/include/grass64" \
 	--with-grass=`echo /usr/%{_lib}/grass-*`
 
 %{__make}
